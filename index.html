@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fizza Ali - Personal Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:'Poppins',sans-serif;background:#f0f2f5;color:#333;scroll-behavior:smooth;}
+    header{background:#1b2a49;color:#fff;padding:20px 0;position:sticky;top:0;z-index:10;}
+    header .container{width:90%;margin:auto;display:flex;justify-content:space-between;align-items:center;}
+    header h1{font-size:1.8rem;}
+    nav ul{list-style:none;display:flex;gap:20px;}
+    nav a{color:#fff;text-decoration:none;font-weight:500;transition:0.3s;}
+    nav a:hover{color:#00b4d8;}
+
+    section{padding:60px 20px;max-width:1200px;margin:auto;}
+    h2.section-title{text-align:center;font-size:2rem;margin-bottom:40px;color:#1b2a49;position:relative;}
+    h2.section-title::after{
+      content:'';display:block;width:60px;height:3px;background:#00b4d8;
+      margin:10px auto 0;border-radius:2px;
+    }
+
+    /* About */
+    .about-content{
+      display:flex;flex-wrap:wrap;align-items:center;gap:30px;justify-content:center;
+    }
+    .about-content img{
+      width:250px;height:250px;object-fit:cover;border-radius:50%;
+      border:5px solid #00b4d8;box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+    .about-text{max-width:500px;font-size:1.1rem;line-height:1.7;}
+
+    /* Grid for skills & hobbies */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;}
+    .card{
+      background:#fff;padding:30px 20px;border-radius:12px;text-align:center;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:transform 0.3s,box-shadow 0.3s;cursor:pointer;
+    }
+    .card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.15);}
+    .card i{font-size:2rem;color:#00b4d8;margin-bottom:10px;}
+    .card h3{font-size:1.2rem;}
+
+    /* Colorful hobbies */
+    .hobby-card{
+      color:#fff;padding:30px 20px;border-radius:12px;text-align:center;
+      box-shadow:0 4px 10px rgba(0,0,0,0.15);
+      transition:transform 0.3s, box-shadow 0.3s;
+    }
+    .hobby-card:nth-child(1){background:linear-gradient(135deg,#7a42ff,#5c28c7);}
+    .hobby-card:nth-child(2){background:linear-gradient(135deg,#ff7b7b,#ff3c3c);}
+    .hobby-card:nth-child(3){background:linear-gradient(135deg,#5edfff,#3b9eff);}
+    .hobby-card:nth-child(4){background:linear-gradient(135deg,#ffc75f,#f9a602);}
+    .hobby-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.25);}
+    .hobby-card i{font-size:2rem;margin-bottom:10px;}
+
+    /* Contact Section */
+    .contact-wrapper{
+      display:flex;gap:40px;justify-content:center;align-items:flex-start;flex-wrap:wrap;
+      max-width:1000px;margin:auto;background:#fff;padding:40px;border-radius:20px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.1);
+    }
+    .contact-wrapper img{
+      width:300px;height:300px;object-fit:cover;border-radius:20px;
+      border:5px solid #00b4d8;box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    }
+    form{flex:1;min-width:350px;}
+    form input,form textarea{
+      width:100%;padding:14px;margin:10px 0;
+      border:1px solid #ccc;border-radius:8px;font-size:1rem;
+    }
+    form button{
+      background:#00b4d8;color:#fff;border:none;padding:14px 25px;
+      border-radius:8px;font-size:1rem;cursor:pointer;transition:0.3s;
+    }
+    form button:hover{background:#0090b0;}
+
+    footer{background:#1b2a49;color:#fff;text-align:center;padding:20px;margin-top:40px;}
+
+    @media(max-width:768px){
+      .about-content{flex-direction:column;}
+      .contact-wrapper{flex-direction:column;align-items:center;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Fizza Ali</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- About -->
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-content">
+    <img src="https://cdn-icons-png.flaticon.com/512/2922/2922561.png" alt="Girl Avatar">
+    <div class="about-text">
+      <p>Hello! I'm Fizza Ali, a BS CS student passionate about frontend development and creating beautiful, user-friendly websites. I enjoy learning new technologies and bringing creative ideas to life on the web.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="grid">
+    <div class="card"><i class="fab fa-html5"></i><h3>HTML</h3></div>
+    <div class="card"><i class="fab fa-css3-alt"></i><h3>CSS</h3></div>
+    <div class="card"><i class="fab fa-js"></i><h3>JavaScript</h3></div>
+    <div class="card"><i class="fab fa-git-alt"></i><h3>Git</h3></div>
+    <div class="card"><i class="fas fa-paint-brush"></i><h3>Canva</h3></div>
+  </div>
+</section>
+
+<!-- Hobbies -->
+<section id="hobbies">
+  <h2 class="section-title">Hobbies</h2>
+  <div class="grid">
+    <div class="hobby-card"><i class="fas fa-music"></i><h3>Music</h3></div>
+    <div class="hobby-card"><i class="fas fa-book"></i><h3>Reading</h3></div>
+    <div class="hobby-card"><i class="fas fa-camera"></i><h3>Photography</h3></div>
+    <div class="hobby-card"><i class="fas fa-biking"></i><h3>Cycling</h3></div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2 class="section-title">Contact Me</h2>
+  <div class="contact-wrapper">
+    <img src="https://cdn-icons-png.flaticon.com/512/2922/2922561.png" alt="Girl Avatar">
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Fizza Ali. All Rights Reserved.</p>
+</footer>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value;
+  alert(`Thank you for your message, ${name}!`);
+  this.reset();
+});
+</script>
+
+</body>
+</html>
